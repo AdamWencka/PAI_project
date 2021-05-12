@@ -4,6 +4,7 @@ import com.example.Car_rental_PAI_project.model.enums.Role;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table
@@ -19,6 +20,9 @@ public class Worker {
     @JoinColumn(name = "department_assigned", nullable =false)
     @JsonIgnoreProperties({"listOfWorkers"})
     private Department currDepartment;
+    @OneToMany(mappedBy = "worker")
+    @JsonIgnoreProperties({"worker"})
+    private List<Reservation> reservations;
 
     public Worker() {
     }

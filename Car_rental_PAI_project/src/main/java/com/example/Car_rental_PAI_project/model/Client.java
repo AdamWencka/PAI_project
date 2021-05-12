@@ -1,5 +1,6 @@
 package com.example.Car_rental_PAI_project.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -19,7 +20,8 @@ public class Client {
     private String surname;
     private String email;
     private String address;
-    @OneToMany
+    @OneToMany(mappedBy = "client")
+    @JsonIgnoreProperties({"client"})
     private List<Reservation> reservations;
 
     public Client(String name, String surname, String email, String address) {

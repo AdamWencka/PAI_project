@@ -1,6 +1,7 @@
 package com.example.Car_rental_PAI_project.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import org.hibernate.jdbc.Work;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -18,9 +19,16 @@ public class Reservation {
     private Car car;
     private LocalDateTime startDate;
     private LocalDateTime endDate;
-
+    private String comment;
+    private String returnDepartment;
+    private String rentalDepartment;
     private Float totalCost;
-
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "client_assigned",nullable = false)
+    private Client client;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "worker_assigned",nullable = false)
+    private Worker worker;
     public Reservation() {
     }
 
