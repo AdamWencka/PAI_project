@@ -31,6 +31,14 @@ public class Department {
         this.rentalOffice = rentalOffice;
     }
 
+    public Long getDepartment_Id() {
+        return department_Id;
+    }
+
+    public void setDepartment_Id(Long department_Id) {
+        this.department_Id = department_Id;
+    }
+
     public String getAddress() {
         return address;
     }

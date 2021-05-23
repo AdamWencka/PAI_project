@@ -39,6 +39,30 @@ public class Reservation {
 
     }
 
+    public Long getReservation_Id() {
+        return reservation_Id;
+    }
+
+    public void setReservation_Id(Long reservation_Id) {
+        this.reservation_Id = reservation_Id;
+    }
+
+    public String getReturnDepartment() {
+        return returnDepartment;
+    }
+
+    public void setReturnDepartment(String returnDepartment) {
+        this.returnDepartment = returnDepartment;
+    }
+
+    public String getRentalDepartment() {
+        return rentalDepartment;
+    }
+
+    public void setRentalDepartment(String rentalDepartment) {
+        this.rentalDepartment = rentalDepartment;
+    }
+
     public LocalDateTime getReservationDate() {
         return reservationDate;
     }

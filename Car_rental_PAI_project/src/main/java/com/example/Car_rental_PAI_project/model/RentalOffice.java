@@ -12,7 +12,7 @@ import java.util.List;
 public class RentalOffice {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long office_Id;
+    private Long office_Id;
     private String name;
     private String owner;
     private String contactNumber;
@@ -40,11 +40,11 @@ public class RentalOffice {
         this.webDomain = webDomain;
     }
 
-    public long getOffice_Id() {
+    public Long getOffice_Id() {
         return office_Id;
     }
 
-    public void setOffice_Id(long office_Id) {
+    public void setOffice_Id(Long office_Id) {
         this.office_Id = office_Id;
     }
 

@@ -52,6 +52,14 @@ public class Car {
         this.department = department;
     }
 
+    public Long getCar_Id() {
+        return car_Id;
+    }
+
+    public void setCar_Id(Long car_Id) {
+        this.car_Id = car_Id;
+    }
+
     public String getBrand() {
         return brand;
     }

@@ -34,6 +34,14 @@ public class Worker {
         this.currDepartment = currDepartment;
     }
 
+    public Long getWorker_Id() {
+        return worker_Id;
+    }
+
+    public void setWorker_Id(Long worker_Id) {
+        this.worker_Id = worker_Id;
+    }
+
     public String getName() {
         return name;
     }
