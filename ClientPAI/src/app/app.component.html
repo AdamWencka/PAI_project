@@ -1,7 +1,27 @@
-<h1>Car Rental</h1>
-<nav>
-  <ul>
-    <li><a routerLink="/car-list" routerLinkActive="active">Wszystkie samochody</a></li>
-  </ul>
+<nav class="navbar navbar-expand-lg navbar-dark bg-info">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Car Rental</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="/">Homepage</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/car-list" routerLinkActive="active">Available cars</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/" routerLinkActive="active">Reserved cars</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/" routerLinkActive="active">Rented cars</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav>
+
 <router-outlet></router-outlet>

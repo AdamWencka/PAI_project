@@ -1,4 +1,16 @@
-<h2>Car List</h2>
-<ul *ngFor="let car of cars">
-  <li>{{car.model}}</li>
-</ul>
+<div class="row justify-content-md-center h1container">
+  <h1>Car List</h1>
+</div>
+
+<div class="row justify-content-md-center car-list">
+  <div class="card bg-light mb-3" style="max-width: 20rem; margin: 0px 20px;" *ngFor="let car of cars">
+    <div class="card-header">{{car.model}} - {{car.year}}</div>
+    <div class="card-body">
+      <p>Address: {{car.department.address}}</p>
+      <p>Biuro: {{car.department.rentalOffice.name}}</p>
+      <p>Kontakt: {{car.department.rentalOffice.contactNumber}}</p>
+      <hr />
+      <button>Zarezerwuj</button> | <button>Wypożycz</button> | <button>Edytuj</button>
+    </div>
+  </div>
+</div>
