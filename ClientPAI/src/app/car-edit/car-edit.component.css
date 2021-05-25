@@ -1,0 +1,6 @@
+h1 { color: #fff;}
+.h1container { background: #058096!important; border-bottom: 1px solid black; border-top: 1px solid black; padding: 20px 0 15px 0; }
+.car-list { padding: 30px 0; }
+.container-component { width: 50%; margin: 0 auto; padding-top: 20px;}
+table { background-color: #fff; }
+table > tbody > tr > th { text-align: right; width: 30%; }

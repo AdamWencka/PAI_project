@@ -6,13 +6,20 @@ import { Observable } from 'rxjs';
 export class CarService {
 
   public API = '//localhost:8080';
-  public CAR_API = this.API + '/cars';
+  public GET_ALL_CARS_API = this.API + '/cars';
+  public GET_CAR_BY_ID_API = this.API + '/car/';
+
+  idCAR$: any;
 
   constructor(private http: HttpClient) {
   }
 
   getAll(): Observable<any> {
-    return this.http.get(this.CAR_API);
+    return this.http.get(this.GET_ALL_CARS_API);
+  }
+
+  getCar(): Observable<any> {
+    return this.http.get(this.GET_CAR_BY_ID_API + this.idCAR$)
   }
 
 }

@@ -3,14 +3,14 @@
 </div>
 
 <div class="row justify-content-md-center car-list">
-  <div class="card bg-light mb-3" style="max-width: 20rem; margin: 0px 20px;" *ngFor="let car of cars">
-    <div class="card-header">{{car.model}} - {{car.year}}</div>
+  <div class="card bg-light mb-3" style="max-width: 22rem; margin: 0px 20px;" *ngFor="let car of cars">
+    <div class="card-header">{{car.brand}} {{car.model}} - {{car.year}}</div>
     <div class="card-body">
       <p>Address: {{car.department.address}}</p>
       <p>Biuro: {{car.department.rentalOffice.name}}</p>
       <p>Kontakt: {{car.department.rentalOffice.contactNumber}}</p>
       <hr />
-      <button>Zarezerwuj</button> | <button>Wypożycz</button> | <button>Edytuj</button>
+      <a class="btn btn-primary" href="/">Zarezerwuj</a> | <a class="btn btn-primary" href="/">Wypożycz</a> | <a class="btn btn-primary" href="car-edit?id={{car.car_Id}}">Edytuj</a>
     </div>
   </div>
 </div>

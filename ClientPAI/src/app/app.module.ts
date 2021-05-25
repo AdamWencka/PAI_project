@@ -8,11 +8,13 @@ import { CarListComponent } from './car-list/car-list.component';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CarEditComponent } from './car-edit/car-edit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CarListComponent
+    CarListComponent,
+    CarEditComponent
   ],
   imports: [
     BrowserModule,
