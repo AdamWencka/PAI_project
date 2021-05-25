@@ -11,7 +11,7 @@ import java.util.List;
 public class Car {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long car_Id;
+    private Integer car_Id;
     private String brand;
     private String model;
     private int year;
@@ -52,11 +52,11 @@ public class Car {
         this.department = department;
     }
 
-    public Long getCar_Id() {
+    public Integer getCar_Id() {
         return car_Id;
     }
 
-    public void setCar_Id(Long car_Id) {
+    public void setCar_Id(Integer car_Id) {
         this.car_Id = car_Id;
     }
 

@@ -7,7 +7,7 @@ import java.util.Optional;
 
 public interface CarService {
     Collection<Car> getAllCars();
-    Optional<Car> getCar(Long car_Id);
+    Optional<Car> getCar(Integer car_Id);
     Car setCar(Car car);
     void deleteCar(Long car_Id);
 }

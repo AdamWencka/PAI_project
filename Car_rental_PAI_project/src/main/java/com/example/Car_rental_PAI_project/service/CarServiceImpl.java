@@ -4,9 +4,7 @@ import com.example.Car_rental_PAI_project.model.Car;
 import com.example.Car_rental_PAI_project.repository.CarRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -30,8 +28,11 @@ public class CarServiceImpl implements CarService {
     }
 
     @Override
-    public Optional<Car> getCar(Long car_Id) {
-        return carRepository.findById(Math.toIntExact(car_Id));
+    @CrossOrigin(origins = "http://localhost:4200")
+    @GetMapping("/car/{car_Id}")
+    @ResponseBody
+    public Optional<Car> getCar(@PathVariable Integer car_Id) {
+        return carRepository.findById(car_Id);
     }
 
     @Override
