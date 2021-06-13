@@ -17,7 +17,7 @@ public class RentalOfficeServiceImpl implements RentalOfficeService {
     }
 
     @Override
-    public Optional<RentalOffice> getRentalOffice(Long office_Id) {
+    public Optional<RentalOffice> getRentalOffice(Integer office_Id) {
         return rentalOfficeRepository.findById(Math.toIntExact(office_Id));
     }
 
@@ -34,7 +34,7 @@ public class RentalOfficeServiceImpl implements RentalOfficeService {
 
     @Override
     @Transactional
-    public void deleteRentalOffice(Long office_Id) {
+    public void deleteRentalOffice(Integer office_Id) {
         /*for(Car car : carRepository.findZadaniaProjektu(projektId)) {
             zadanieRepository.delete(zadanie);
         }*/

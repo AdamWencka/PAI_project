@@ -11,7 +11,7 @@ import java.util.List;
 public class Worker {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long worker_Id;
+    private Integer worker_Id;
     private String name;
     private String surname;
     @Enumerated(value = EnumType.STRING)
@@ -34,11 +34,11 @@ public class Worker {
         this.currDepartment = currDepartment;
     }
 
-    public Long getWorker_Id() {
+    public Integer getWorker_Id() {
         return worker_Id;
     }
 
-    public void setWorker_Id(Long worker_Id) {
+    public void setWorker_Id(Integer worker_Id) {
         this.worker_Id = worker_Id;
     }
 

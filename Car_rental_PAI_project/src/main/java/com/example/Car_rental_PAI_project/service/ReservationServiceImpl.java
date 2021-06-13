@@ -17,7 +17,7 @@ public class ReservationServiceImpl implements ReservationService {
     }
 
     @Override
-    public Optional<Reservation> getReservation(Long reservation_Id) {
+    public Optional<Reservation> getReservation(Integer reservation_Id) {
         return reservationRepository.findById(Math.toIntExact(reservation_Id));
     }
 
@@ -34,7 +34,7 @@ public class ReservationServiceImpl implements ReservationService {
 
     @Override
     @Transactional
-    public void deleteReservation(Long reservation_Id) {
+    public void deleteReservation(Integer reservation_Id) {
         /*for(Car car : carRepository.findZadaniaProjektu(projektId)) {
             zadanieRepository.delete(zadanie);
         }*/

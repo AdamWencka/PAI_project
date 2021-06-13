@@ -17,7 +17,7 @@ public class ClientServiceImpl implements ClientService {
     }
 
     @Override
-    public Optional<Client> getClient(Long client_Id) {
+    public Optional<Client> getClient(Integer client_Id) {
         return clientRepository.findById(Math.toIntExact(client_Id));
     }
 
@@ -34,7 +34,7 @@ public class ClientServiceImpl implements ClientService {
 
     @Override
     @Transactional
-    public void deleteClient(Long client_Id) {
+    public void deleteClient(Integer client_Id) {
         /*for(Car car : carRepository.findZadaniaProjektu(projektId)) {
             zadanieRepository.delete(zadanie);
         }*/

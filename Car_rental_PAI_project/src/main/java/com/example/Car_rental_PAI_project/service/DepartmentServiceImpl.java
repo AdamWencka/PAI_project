@@ -17,7 +17,7 @@ public class DepartmentServiceImpl implements DepartmentService{
     }
 
     @Override
-    public Optional<Department> getDepartment(Long department_Id) {
+    public Optional<Department> getDepartment(Integer department_Id) {
         return departmentRepository.findById(Math.toIntExact(department_Id));
     }
 
@@ -34,7 +34,7 @@ public class DepartmentServiceImpl implements DepartmentService{
 
     @Override
     @Transactional
-    public void deleteDepartment(Long department_Id) {
+    public void deleteDepartment(Integer department_Id) {
         /*for(Car car : carRepository.findZadaniaProjektu(projektId)) {
             zadanieRepository.delete(zadanie);
         }*/

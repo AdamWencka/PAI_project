@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 public class Reservation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long reservation_Id;
+    private Integer reservation_Id;
     private LocalDateTime reservationDate = LocalDateTime.now();
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "car_assigned",nullable = false)
@@ -39,11 +39,11 @@ public class Reservation {
 
     }
 
-    public Long getReservation_Id() {
+    public Integer getReservation_Id() {
         return reservation_Id;
     }
 
-    public void setReservation_Id(Long reservation_Id) {
+    public void setReservation_Id(Integer reservation_Id) {
         this.reservation_Id = reservation_Id;
     }
 

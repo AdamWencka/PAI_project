@@ -10,7 +10,7 @@ import java.util.List;
 public class Department {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long department_Id;
+    private Integer department_Id;
     private String address;
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "office_assigned",nullable = false)
@@ -31,11 +31,11 @@ public class Department {
         this.rentalOffice = rentalOffice;
     }
 
-    public Long getDepartment_Id() {
+    public Integer getDepartment_Id() {
         return department_Id;
     }
 
-    public void setDepartment_Id(Long department_Id) {
+    public void setDepartment_Id(Integer department_Id) {
         this.department_Id = department_Id;
     }
 

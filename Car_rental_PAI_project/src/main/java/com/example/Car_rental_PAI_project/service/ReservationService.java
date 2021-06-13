@@ -6,7 +6,7 @@ import com.example.Car_rental_PAI_project.model.Reservation;
 import java.util.Optional;
 
 public interface ReservationService {
-    Optional<Reservation> getReservation(Long reservation_Id);
+    Optional<Reservation> getReservation(Integer reservation_Id);
     Reservation setReservation(Reservation reservation);
-    void deleteReservation(Long reservation_Id);
+    void deleteReservation(Integer reservation_Id);
 }

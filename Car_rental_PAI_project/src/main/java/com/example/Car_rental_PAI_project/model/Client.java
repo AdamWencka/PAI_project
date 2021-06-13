@@ -15,7 +15,7 @@ import java.util.List;
 public class Client {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long client_Id;
+    private Integer client_Id;
     private String name;
     private String surname;
     private String email;
@@ -31,11 +31,11 @@ public class Client {
         this.address = address;
     }
 
-    public Long getClient_Id() {
+    public Integer getClient_Id() {
         return client_Id;
     }
 
-    public void setClient_Id(Long client_Id) {
+    public void setClient_Id(Integer client_Id) {
         this.client_Id = client_Id;
     }
 

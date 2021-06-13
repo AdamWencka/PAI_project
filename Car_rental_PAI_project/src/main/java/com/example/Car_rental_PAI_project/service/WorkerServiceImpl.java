@@ -17,7 +17,7 @@ public class WorkerServiceImpl implements WorkerService {
     }
 
     @Override
-    public Optional<Worker> getWorker(Long worker_Id) {
+    public Optional<Worker> getWorker(Integer worker_Id) {
         return workerRepository.findById(Math.toIntExact(worker_Id));
     }
 
@@ -34,7 +34,7 @@ public class WorkerServiceImpl implements WorkerService {
 
     @Override
     @Transactional
-    public void deleteWorker(Long worker_Id) {
+    public void deleteWorker(Integer worker_Id) {
         /*for(Car car : carRepository.findZadaniaProjektu(projektId)) {
             zadanieRepository.delete(zadanie);
         }*/
