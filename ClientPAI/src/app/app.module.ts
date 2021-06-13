@@ -9,12 +9,20 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarEditComponent } from './car-edit/car-edit.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+
+import { authInterceptorProviders } from './_helpers/auth.interceptor';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CarListComponent,
-    CarEditComponent
+    CarEditComponent,
+    LoginComponent,
+    RegisterComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +31,7 @@ import { CarEditComponent } from './car-edit/car-edit.component';
     AppRoutingModule,
     NgbModule
   ],
-  providers: [CarService],
+  providers: [CarService, authInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
