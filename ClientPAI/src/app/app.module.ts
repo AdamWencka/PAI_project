@@ -14,6 +14,7 @@ import { RegisterComponent } from './register/register.component';
 
 import { authInterceptorProviders } from './_helpers/auth.interceptor';
 import { ProfileComponent } from './profile/profile.component';
+import { CarDelComponent } from './car-del/car-del.component';
 
 @NgModule({
   declarations: [
@@ -22,10 +23,11 @@ import { ProfileComponent } from './profile/profile.component';
     CarEditComponent,
     LoginComponent,
     RegisterComponent,
-    ProfileComponent
+    ProfileComponent,
+    CarDelComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     HttpClientModule,
     FormsModule,
     AppRoutingModule,

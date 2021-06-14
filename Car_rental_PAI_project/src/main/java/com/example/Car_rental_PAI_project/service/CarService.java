@@ -9,5 +9,5 @@ public interface CarService {
     Collection<Car> getAllCars();
     Optional<Car> getCar(Integer car_Id);
     Car setCar(Car car);
-    void deleteCar(Long car_Id);
+    void deleteCar(Integer car_Id);
 }

@@ -28,9 +28,9 @@ public class CarServiceImpl implements CarService {
     }
 
     @Override
-    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/car/{car_Id}")
     @ResponseBody
+    @CrossOrigin(origins = "http://localhost:4200")
     public Optional<Car> getCar(@PathVariable Integer car_Id) {
         return carRepository.findById(car_Id);
     }
@@ -47,11 +47,9 @@ public class CarServiceImpl implements CarService {
     }
 
     @Override
-    @Transactional
-    public void deleteCar(Long car_Id) {
-        /*for(Car car : carRepository.findZadaniaProjektu(projektId)) {
-            zadanieRepository.delete(zadanie);
-        }*/
-        carRepository.deleteById(Math.toIntExact(car_Id));
+    @DeleteMapping("/delcar/{car_Id}")
+    @CrossOrigin(origins = "http://localhost:4200")
+    public void deleteCar(@PathVariable Integer car_Id) {
+        carRepository.deleteById(car_Id);
     }
 }
