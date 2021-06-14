@@ -4,3 +4,5 @@ h1 { color: #fff;}
 .container-component { width: 50%; margin: 0 auto; padding-top: 20px;}
 table { background-color: #fff; }
 table > tbody > tr > th { text-align: right; width: 30%; }
+table > tbody > tr > td > input { width: 100%; }
+table > tbody > tr > td > select { width: 100%; }
