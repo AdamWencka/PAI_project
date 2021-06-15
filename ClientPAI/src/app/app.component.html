@@ -14,7 +14,10 @@
           <a class="nav-link" routerLink="/car-list" routerLinkActive="active">Available cars</a>
         </li>
         <li class="nav-item" *ngIf="isLoggedIn">
-          <a class="nav-link" routerLink="/department-list" routerLinkActive="active">Department list</a>
+          <a class="nav-link" routerLink="/car-add" routerLinkActive="active">Add Car</a>
+        </li>
+        <li class="nav-item" *ngIf="isLoggedIn">
+          <a class="nav-link" routerLink="/department-list" routerLinkActive="active">Departments list</a>
         </li>
       </ul>
     </div>

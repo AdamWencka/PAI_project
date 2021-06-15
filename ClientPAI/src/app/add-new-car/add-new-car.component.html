@@ -1,0 +1,55 @@
+<div class="row justify-content-md-center h1container">
+    <h1>Add Car</h1>
+  </div>
+<div class="container-component">  
+<!-- <form [formGroup]="addCarForm" (ngSubmit)="addCar()"> -->
+  <table class="table table-bordered">
+    <tbody>
+      <tr>
+        <th scope="row">Brand:</th>
+        <td><input type="text" name="car_brand" formControlName="car_brand" /></td>
+      </tr>
+      <tr>
+        <th scope="row">Model:</th>
+        <td><input type="text" name="car_model"/></td>
+      </tr>
+      <tr>
+        <th scope="row">Year:</th>
+        <td><input type="text" name="car_model"/></td>
+      </tr>
+      <tr>
+        <th scope="row">Color:</th>
+        <td><input type="text" name="car_model" /></td>
+      </tr>
+      <tr>
+        <th scope="row">Body type:</th>
+        <td><input type="text" name="car_model"/></td>
+      </tr>
+      <tr>
+        <th scope="row">Mileage:</th>
+        <td><input type="text" name="car_model"/></td>
+      </tr>
+      <tr>
+        <th scope="row">Department:</th>
+        <td>
+        <select name="car_department">
+        <ng-container *ngFor="let department of departments">
+          <option value="{{department.department_Id}}">{{department.rentalOffice.name}} - {{department.address}}</option>
+        </ng-container>
+        </select>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">Cost:</th>
+        <td><input type="text" name="car_model" /></td>
+      </tr>
+      <tr>
+        <td colspan="2" style="text-align: center;">
+          <button class="btn btn-primary" (click)="addCar()">Add Car</button>
+        </td>
+      </tr>                       
+    </tbody>
+  </table>
+<!-- </form>   -->
+</div>
+  

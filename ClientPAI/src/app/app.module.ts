@@ -13,10 +13,11 @@ import { CarEditComponent } from './car-edit/car-edit.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { CarDepartListComponent } from './car-depart-list/car-depart-list.component';
-
+import { AddNewCarComponent } from './add-new-car/add-new-car.component';
 import { authInterceptorProviders } from './_helpers/auth.interceptor';
 import { ProfileComponent } from './profile/profile.component';
 import { DepartListComponent } from './depart-list/depart-list.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,14 +28,16 @@ import { DepartListComponent } from './depart-list/depart-list.component';
     LoginComponent,
     RegisterComponent,
     ProfileComponent,
-    CarDepartListComponent
+    CarDepartListComponent,
+    AddNewCarComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     HttpClientModule,
     FormsModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    ReactiveFormsModule
   ],
   providers: [CarService, DepartmentService, authInterceptorProviders],
   bootstrap: [AppComponent]

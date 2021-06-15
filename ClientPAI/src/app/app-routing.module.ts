@@ -8,9 +8,11 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 import { CarDepartListComponent } from './car-depart-list/car-depart-list.component';
+import { AddNewCarComponent } from './add-new-car/add-new-car.component';
 
 const routes: Routes = [
   { path: 'car-list', component: CarListComponent },
+  { path: 'car-add', component: AddNewCarComponent },
   { path: 'car-edit', component: CarEditComponent },
   { path: 'department-list', component: DepartListComponent },
   { path: 'cars-department', component: CarDepartListComponent },

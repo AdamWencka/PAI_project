@@ -36,6 +36,10 @@ export class CarService {
     return this.http.get(this.GET_CAR_BY_ID_API + this.idCAR$)
   }
 
+  // addCar(): Observable<any> {
+  //   return this.http.put(this.GET_CAR_BY_ID_API + this.idCAR$, { department_Id: department.department_Id })
+  // }
+
   deleteCar(id: number): Observable<any> {
     const headers = { 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS' };
     return this.http.delete(this.DELETE_CAR_BY_ID_API + id, { headers });

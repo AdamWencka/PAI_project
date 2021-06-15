@@ -8,7 +8,7 @@
       <div class="card-body">
         <p>Address: {{department.address}}</p>
         <p>Contact: {{department.rentalOffice.contactNumber}} </p>
-        <p>Web: {{department.rentalOffice.webDomain}} </p>
+        <p>Web: <a href="https://{{department.rentalOffice.webDomain}}">{{department.rentalOffice.webDomain}}</a> </p>
         <hr />
         <div style="text-align: center;">
             <a class="btn btn-primary" href="/cars-department?id={{department.department_Id}}">Lista samochodów</a>
