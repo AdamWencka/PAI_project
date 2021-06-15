@@ -10,14 +10,11 @@
         <li class="nav-item">
           <a class="nav-link active" href="/">Homepage</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="isLoggedIn">
           <a class="nav-link" routerLink="/car-list" routerLinkActive="active">Available cars</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/" routerLinkActive="active">Reserved cars</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/" routerLinkActive="active">Rented cars</a>
+        <li class="nav-item" *ngIf="isLoggedIn">
+          <a class="nav-link" routerLink="/department-list" routerLinkActive="active">Department list</a>
         </li>
       </ul>
     </div>

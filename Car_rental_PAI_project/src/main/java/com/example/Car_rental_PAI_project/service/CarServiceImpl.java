@@ -1,7 +1,10 @@
 package com.example.Car_rental_PAI_project.service;
 
 import com.example.Car_rental_PAI_project.model.Car;
+import com.example.Car_rental_PAI_project.model.Department;
 import com.example.Car_rental_PAI_project.repository.CarRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
@@ -34,6 +37,13 @@ public class CarServiceImpl implements CarService {
     @CrossOrigin(origins = "http://localhost:4200")
     public Optional<Car> getCar(@PathVariable Integer car_Id) {
         return carRepository.findById(car_Id);
+    }
+
+    @Override
+    @PostMapping("/car-dep")
+    @CrossOrigin(origins = "http://localhost:4200")
+    public Collection<Car> findAllCarByIdDepartment(@RequestBody Department department) {
+        return carRepository.findAllByDepartmentEquals(department);
     }
 
     @Override

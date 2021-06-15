@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { HttpInterceptor, HttpHandler, HttpRequest } from '@angular/common/http';
+import { Department } from '../../department';
+import { HttpParams } from '@angular/common/http'
 
 @Injectable()
 export class CarService {
@@ -10,6 +12,8 @@ export class CarService {
   public GET_ALL_CARS_API = this.API + '/cars';
   public GET_CAR_BY_ID_API = this.API + '/car/';
   public DELETE_CAR_BY_ID_API = this.API + '/delcar/';
+
+  public GET_CARS_BY_DEPARTMENT = this.API + '/car-dep';
 
   idCAR$: any;
 
@@ -36,5 +40,9 @@ export class CarService {
     const headers = { 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS' };
     return this.http.delete(this.DELETE_CAR_BY_ID_API + id, { headers });
   } 
+
+  getAllByDepartment(department: Department): Observable<any> {
+    return this.http.post(this.GET_CARS_BY_DEPARTMENT, { department_Id: department.department_Id });
+  }
 
 }

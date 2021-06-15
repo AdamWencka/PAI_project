@@ -1,0 +1,19 @@
+<div class="row justify-content-md-center h1container">
+    <h1>Department List</h1>
+  </div>
+  
+  <div class="row justify-content-md-center car-list">
+    <div class="card bg-light mb-3" style="max-width: 22rem; margin: 0px 20px; width: 300px;" *ngFor="let department of departments">
+      <div class="card-header">{{department.rentalOffice.name}}</div>
+      <div class="card-body">
+        <p>Address: {{department.address}}</p>
+        <p>Contact: {{department.rentalOffice.contactNumber}} </p>
+        <p>Web: {{department.rentalOffice.webDomain}} </p>
+        <hr />
+        <div style="text-align: center;">
+            <a class="btn btn-primary" href="/cars-department?id={{department.department_Id}}">Lista samochodów</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
